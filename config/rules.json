@@ -33,6 +33,7 @@
       "metrics_extended",
       "pages",
       "pages_extended",
+      "pages_info",
       "refdomains",
       "refdomains_by_type",
       "refdomains_new_lost",
@@ -57,6 +58,7 @@
       "metrics_extended",
       "pages",
       "pages_extended",
+      "pages_info",
       "refdomains",
       "refdomains_new_lost",
       "refdomains_new_lost_counters"
@@ -348,6 +350,24 @@
       "refdomains": ["int", true, true],
       "refclass_c": ["int", true, true],
       "refips": ["int", true, true]
+    },
+    "pages_info": {
+      "url": ["string", true, true],
+      "ip": ["string", true, true],
+      "time": ["int", true, true],
+      "http_code": ["int", true, true],
+      "size": ["int", true, true],
+      "words": ["int", true, true],
+      "links_internal": ["int", true, true],
+      "links_external": ["int", true, true],
+      "links_images": ["int", true, true],
+      "encoding": ["string", true, true],
+      "title": ["string", true, true],
+      "redirect_url": ["string", true, true],
+      "canonical_url": ["string", true, true],
+      "content_encoding": ["string", true, true],
+      "description": ["string", true, true],
+      "meta_social": ["string", true, true]
     },
     "refdomains": {
       "url": ["string", true, false],
