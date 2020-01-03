@@ -90,6 +90,7 @@
       "url_to": ["string", true, true],
       "ahrefs_rank": ["int", true, true],
       "domain_rating": ["int", false, true],
+      "ahrefs_top": ["int", false, true],
       "ip_from": ["string", true, true],
       "links_internal": ["int", true, true],
       "links_external": ["int", true, true],
