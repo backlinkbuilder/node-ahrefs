@@ -249,7 +249,8 @@
       "error": ["string", true, true]
     },
     "domain_rating": {
-      "domain_rating": ["int", false, true]
+      "domain_rating": ["int", false, true],
+      "ahrefs_top": ["int", false, true]
     },
     "linked_anchors": {
       "anchor": ["string", true, true],
@@ -322,6 +323,7 @@
     "pages": {
       "url": ["string", true, true],
       "ahrefs_rank": ["int", true, true],
+      "first_seen": ["date", true, true],
       "last_visited": ["date", true, true],
       "http_code": ["int", true, true],
       "size": ["int", true, true],
