@@ -96,6 +96,7 @@
       "links_external": ["int", true, true],
       "page_size": ["int", true, true],
       "encoding": ["string", true, true],
+      "language": ["string", true, true],
       "title": ["string", true, true],
       "first_seen": ["date", true, true],
       "last_visited": ["date", true, true],
@@ -108,7 +109,9 @@
       "alt": ["string", true, true],
       "anchor": ["string", true, true],
       "text_pre": ["string", true, true],
-      "text_post": ["string", true, true]
+      "text_post": ["string", true, true],
+      "http_code": ["int", true, true],
+      "url_from_first_seen": ["date", true, true]
     },
     "backlinks_new_lost": {
       "date": ["date", true, true],
