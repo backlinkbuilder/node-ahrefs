@@ -23,6 +23,7 @@
       "backlinks",
       "backlinks_new_lost",
       "backlinks_new_lost_counters",
+      "backlinks_one_per_domain",
       "broken_backlinks",
       "broken_links",
       "domain_rating",
@@ -32,6 +33,7 @@
       "metrics_extended",
       "pages",
       "pages_extended",
+      "pages_info",
       "refdomains",
       "refdomains_by_type",
       "refdomains_new_lost",
@@ -46,6 +48,7 @@
       "backlinks",
       "backlinks_new_lost",
       "backlinks_new_lost_counters",
+      "backlinks_one_per_domain",
       "broken_backlinks",
       "broken_links",
       "domain_rating",
@@ -55,6 +58,7 @@
       "metrics_extended",
       "pages",
       "pages_extended",
+      "pages_info",
       "refdomains",
       "refdomains_new_lost",
       "refdomains_new_lost_counters"
@@ -86,11 +90,13 @@
       "url_to": ["string", true, true],
       "ahrefs_rank": ["int", true, true],
       "domain_rating": ["int", false, true],
+      "ahrefs_top": ["int", false, true],
       "ip_from": ["string", true, true],
       "links_internal": ["int", true, true],
       "links_external": ["int", true, true],
       "page_size": ["int", true, true],
       "encoding": ["string", true, true],
+      "language": ["string", true, true],
       "title": ["string", true, true],
       "first_seen": ["date", true, true],
       "last_visited": ["date", true, true],
@@ -103,7 +109,9 @@
       "alt": ["string", true, true],
       "anchor": ["string", true, true],
       "text_pre": ["string", true, true],
-      "text_post": ["string", true, true]
+      "text_post": ["string", true, true],
+      "http_code": ["int", true, true],
+      "url_from_first_seen": ["date", true, true]
     },
     "backlinks_new_lost": {
       "date": ["date", true, true],
@@ -161,6 +169,34 @@
       "new_total": ["int", false, true],
       "lost_total": ["int", false, true]
     },
+    "backlinks_one_per_domain": {
+      "url_from": ["string", true, true],
+      "url_to": ["string", true, true],
+      "ahrefs_rank": ["int", true, true],
+      "domain_rating": ["int", false, true],
+      "ahrefs_top": ["int", false, true],
+      "ip_from": ["string", true, true],
+      "links_internal": ["int", true, true],
+      "links_external": ["int", true, true],
+      "page_size": ["int", true, true],
+      "encoding": ["string", true, true],
+      "language": ["string", true, true],
+      "title": ["string", true, true],
+      "first_seen": ["date", true, true],
+      "last_visited": ["date", true, true],
+      "prev_visited": ["date", true, true],
+      "original": ["boolean", true, true],
+      "link_type": ["string", true, true],
+      "redirect": ["int", true, true],
+      "nofollow": ["boolean", true, true],
+      "alt": ["string", true, true],
+      "anchor": ["string", true, true],
+      "text_pre": ["string", true, true],
+      "text_post": ["string", true, true],
+      "http_code": ["int", true, true],
+      "url_from_first_seen": ["date", true, true],
+      "total_backlinks": ["int", false, true]
+    },
     "broken_backlinks": {
       "url_from": ["string", true, true],
       "url_to": ["string", true, true],
@@ -216,7 +252,8 @@
       "error": ["string", true, true]
     },
     "domain_rating": {
-      "domain_rating": ["int", false, true]
+      "domain_rating": ["int", false, true],
+      "ahrefs_top": ["int", false, true]
     },
     "linked_anchors": {
       "anchor": ["string", true, true],
@@ -289,6 +326,7 @@
     "pages": {
       "url": ["string", true, true],
       "ahrefs_rank": ["int", true, true],
+      "first_seen": ["date", true, true],
       "last_visited": ["date", true, true],
       "http_code": ["int", true, true],
       "size": ["int", true, true],
@@ -318,6 +356,24 @@
       "refdomains": ["int", true, true],
       "refclass_c": ["int", true, true],
       "refips": ["int", true, true]
+    },
+    "pages_info": {
+      "url": ["string", true, true],
+      "ip": ["string", true, true],
+      "time": ["int", true, true],
+      "http_code": ["int", true, true],
+      "size": ["int", true, true],
+      "words": ["int", true, true],
+      "links_internal": ["int", true, true],
+      "links_external": ["int", true, true],
+      "links_images": ["int", true, true],
+      "encoding": ["string", true, true],
+      "title": ["string", true, true],
+      "redirect_url": ["string", true, true],
+      "canonical_url": ["string", true, true],
+      "content_encoding": ["string", true, true],
+      "description": ["string", true, true],
+      "meta_social": ["string", true, true]
     },
     "refdomains": {
       "url": ["string", true, false],
